@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "start": "node server.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
