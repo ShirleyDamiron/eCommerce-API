@@ -3,6 +3,7 @@ const app = express();
 const morgan = require("morgan");
 const helmet = require("helmet");
 const bodyParser = require("body-parser")
+const cors = require("cors")
 const fs = require("fs");
 const {
   getAllProducts,
@@ -15,7 +16,7 @@ const {
 
 const accessLogStream = fs.createWriteStream("morgan.log", { flags: "a" });
 // the "A" is for append, appends to
-
+app.use(cors())
 app.use(bodyParser())
 app.use(morgan("combined", { stream: accessLogStream }));
 
